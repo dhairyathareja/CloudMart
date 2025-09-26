@@ -45,6 +45,9 @@ app.use('/user',verifyJWT,userRouter);
 
 app.use('/product',productRouter);
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
 
 
 app.get(/.*/, (req, res) => {
